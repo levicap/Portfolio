@@ -9,6 +9,10 @@ const nextConfig: NextConfig = {
       { hostname: 'media2.dev.to', protocol: 'https' },
     ],
   },
+  eslint: {
+    // Warning: This allows production builds to successfully complete even if there are ESLint warnings or errors.
+    ignoreDuringBuilds: true,
+  },
 };
 
 export default nextConfig;

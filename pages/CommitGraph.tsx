@@ -51,7 +51,7 @@ const CommitConnections = ({ nodes }: { nodes: CommitNode[] }) => {
   );
 };
 
-export const CommitGraph = () => {
+ const CommitGraph = () => {
   const nodes: CommitNode[] = [
     { position: [0, 0, 0], connections: [1, 2] },
     { position: [-1, 1, 0], connections: [3] },
@@ -72,3 +72,4 @@ export const CommitGraph = () => {
     </div>
   );
 };
+export default CommitGraph;

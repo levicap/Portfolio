@@ -16,8 +16,8 @@ import {
   GitMerge,
   GitBranch
 } from 'lucide-react';
-import { CommitGraph } from './CommitGraph';
-import { TypingAnalytics } from './TypingAnalytics';
+import CommitGraph  from './CommitGraph';
+import TypingAnalytics  from './TypingAnalytics';
 import { min } from 'three/tsl';
 import { m } from 'framer-motion';
 

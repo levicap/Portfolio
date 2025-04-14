@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Bot, Code2, Terminal, BrainCircuit, MessageSquareCode, Sparkles, User, Cpu } from 'lucide-react';
+import {  Code2, Terminal, BrainCircuit, MessageSquareCode, Sparkles,  Cpu } from 'lucide-react';
 
 const codeSnippet = `// Initializing AI analysis...
 import { DevProfile } from '@ai/analysis';
@@ -78,16 +78,24 @@ performance_score = {
     responseTime: "156ms"
   }
 ];
+interface MatrixElement {
+  left: string;
+  top: string;
+  duration: string;
+  delay: string;
+  digit: string;
+}
+
 
 function Ai() {
   const [displayText, setDisplayText] = useState('');
   const [currentLine, setCurrentLine] = useState(0);
   const [activeTestimonial, setActiveTestimonial] = useState(0);
-  const [matrixElements, setMatrixElements] = useState([]);
+  const [matrixElements, setMatrixElements] = useState<MatrixElement[]>([]);
 
   // Generate matrix elements only on the client.
   useEffect(() => {
-    const elements = [...Array(50)].map(() => ({
+    const elements: MatrixElement[] = [...Array(50)].map(() => ({
       left: `${Math.random() * 100}%`,
       top: `${Math.random() * 100}%`,
       duration: `${5 + Math.random() * 10}s`,
@@ -96,7 +104,7 @@ function Ai() {
     }));
     setMatrixElements(elements);
   }, []);
-
+  
   // Typewriter effect for the code snippet.
   useEffect(() => {
     const lines = codeSnippet.split('\n');

@@ -6,7 +6,7 @@ interface TypingMetrics {
   consistency: number;
 }
 
-export const TypingAnalytics = () => {
+ const TypingAnalytics = () => {
   const [metrics, setMetrics] = useState<TypingMetrics>({
     wpm: 0,
     accuracy: 0,
@@ -75,3 +75,5 @@ export const TypingAnalytics = () => {
     </div>
   );
 };
+
+export default TypingAnalytics;

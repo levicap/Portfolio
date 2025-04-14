@@ -30,7 +30,13 @@ const experiences = [
   }
 ];
 
-function ExperienceItem({ company, logo, code }) {
+interface ExperienceItemProps {
+  company: string;
+  logo: React.ReactNode;
+  code: string;
+}
+
+function ExperienceItem({ company, logo, code }: ExperienceItemProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -58,8 +64,7 @@ function ExperienceItem({ company, logo, code }) {
             alignItems: 'center',
             gap: '0.75rem',
             color: '#fff',
-          // Ensuring the container is transparent
-          }}    
+          }}
         >
           {logo}
           <span style={{ fontWeight: 600, color: '#fff', backgroundColor: 'transparent' }}>
@@ -83,27 +88,28 @@ function ExperienceItem({ company, logo, code }) {
             overflowX: 'auto'
           }}
         >
-          <TypeAnimation
-            sequence={[code]}
-            wrapper="pre"
-            speed={50}
-            cursor={true}
-            style={{
-              fontFamily: 'monospace',
-              fontSize: '0.875rem',
-              lineHeight: '1.5',
-              whiteSpace: 'pre-wrap',
-              wordBreak: 'break-word',
-              color: '#9cdcfe',
-              textShadow: `
-                0 0 0 #569cd6,
-                0 0 0 #c586c0,
-                0 0 0 #4ec9b0,
-                0 0 0 #ce9178,
-                0 0 0 #d4d4d4
-              `
-            }}
-          />
+      <TypeAnimation
+  sequence={[code]}
+  wrapper={"pre" as any}
+  speed={50}
+  cursor={true}
+  style={{
+    fontFamily: 'monospace',
+    fontSize: '0.875rem',
+    lineHeight: '1.5',
+    whiteSpace: 'pre-wrap',
+    wordBreak: 'break-word',
+    color: '#9cdcfe',
+    textShadow: `
+      0 0 0 #569cd6,
+      0 0 0 #c586c0,
+      0 0 0 #4ec9b0,
+      0 0 0 #ce9178,
+      0 0 0 #d4d4d4
+    `
+  }}
+/>
+
         </div>
       )}
     </div>
@@ -118,8 +124,7 @@ function Exp() {
         padding: '2rem',
       }}
     >
-      <div style={{ maxWidth: '640px'}}>
-       
+      <div style={{ maxWidth: '640px' }}>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
           {experiences.map((exp, index) => (
             <ExperienceItem
