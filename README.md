@@ -1,5 +1,4 @@
 # vscode-portfolio(by chi5 banana)
-[![Open is Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/itsnitinr/vscode-portfolio)
 
 A Visual Studio Code themed developer portfolio website built with Next.js and deployed on Vercel.
 
