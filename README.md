@@ -1,8 +1,7 @@
-# vscode-portfolio(by chi5 banana)
+# vscode-portfolio
 
 A Visual Studio Code themed developer portfolio website built with Next.js and deployed on Vercel.
 
-![vscode-portfolio banner](https://imgur.com/JXJ9mpO.gif)
 
 ## Features Roadmap
 
@@ -16,9 +15,7 @@ A Visual Studio Code themed developer portfolio website built with Next.js and d
 
 For other features and themes suggestions, please open an issue.
 
-## Environment Variables
 
-For fetching your articles from dev.to, create an `.env.local` file inside the project directory. Check the `.env.local.example` file for more information.
 
 ## Running Development Server
 
@@ -32,12 +29,3 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 All VSCode related components can be found in the `components` folder. To change the content of the portfolio, check out the `pages` folder. To add or remove pages, modify `components/Sidebar.jsx` and `components/Tabsbar.jsx`.
 
-## Next.js Resources
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
